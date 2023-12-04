@@ -7,11 +7,18 @@ Encrypted messages are shared as QR codes using regular smartphones.
 In case the smartphone is (partly) compromised, the security of the shared messages is not affected.
 
 # architecture
+![usage flow](flow-diagram.png)
+
 Each user has a single handheld qryptr device.
+
 Upon receiving the device, the user can generate his/her ECC keypair, her CryptoID.
+
 The public key of the Crypto ID can be displayed onscreen as a QR code. Another user can add that CryptoID by scanning it. This is preferably done in-person.
+
 After adding keys, users can write messages which are encrypted (AEAD), encoded and displayed as QR codes.
+
 Using their smartphones, the users can photograph/share these QR-encoded, encrypted messages over their preferred messaging app, such as Signal or Whatsapp.
+
 The receiving user can scan the shared photograph with his/her qryptr device. After selecting the recipient, the device will read, decode, decrypt and display the text message.
 
 # use cases
