@@ -7,7 +7,7 @@ Encrypted messages are shared as QR codes using regular smartphones.
 In case the smartphone is (partly) compromised, the security of the shared messages is not affected.
 
 # architecture
-![usage flow](./flow-diagram.png)
+![usage flow](./flow-diagram2.png)
 
 Each user has a single handheld qryptr device.
 
