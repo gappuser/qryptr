@@ -47,6 +47,15 @@ The cryptographic functions are implemented with the arduino Crypto library: htt
 
 The interface uses https://github.com/olikraus/u8g2
 
+### arduino IDE setup
+Using arduino IDE 1.8.19.
+
+Go to the board manager and install Arduino mbed OS RP2040 Boards (3.5.4)
+this should set target_platform=mbed_rp2040 in preferences.txt for the arduino IDE
+
+We use the Arduino mbed_rp2040 target platform, because we want to use the Sharp LS027B7DH01 display, and the earle philhower core does not allow changing the HW SPI pin assignment. We want to use different pins for driving the SPI display in the u8g2 display constructor, because the original pin assignment is very slow.
+
+
 # todos
 ## hardware
 -Add resistor divider to measure the battery voltage
