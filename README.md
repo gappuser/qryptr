@@ -78,5 +78,15 @@ Using the library manager in the Arduino IDE, install the following libraries:
 -Create a software procedure to initialize the camera
 
 # FAQ
--
+## hardware
+Q: Could we run the whole device on 3.3V? 
+
+A: The Sharp LS027B7DH01 display requires 5V according to the specifications, although it seems to work on 3.3V as well. Possibly, the charge boost circuit could be left out if the display is used at 3.3V.
+
+Q: Could we create a single PCB instead of a backplate and frontplate?
+
+A: Yes, it could be done, although a singular PCB would need double-sided PCB assembly, which is more expensive for small quantities @ JLCPCB. Also, a seperate backplate would need to be introduced.
+
+## software
+
 
