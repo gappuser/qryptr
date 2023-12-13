@@ -40,7 +40,11 @@ QR codes are read using a hardware camera, the GM-803.
 
 We are using the Sharp LS027B7DH01 display. 
 
-Hardware designs are available in the /hardware folder. These can be used to improve the design or to order the hardware on jlcpcb.com. 
+Hardware designs are available in the /hardware folder. These can be used to improve the design or to order the hardware on jlcpcb.com directly.
+Alternatively, you can view these at the following urls:
+https://oshwlab.com/thomas255/mainplate-public
+https://oshwlab.com/thomas255/frontplate-public
+
 
 Some parts needs to be ordered seperately from lscs.com
 -LCSC#: C2911889 Clamshell 18P Bottom Contact Surface Mount FFC connector. We used one sided assembly at JLCPCB to save costs. This part can be soldered manually, or alternatively, two sided assembly can be used at JLCPCB, in which case this part does not need to be ordered seperately.
@@ -52,8 +56,6 @@ Some parts needs to be ordered seperately from lscs.com
 You also need M2 nuts and M2 bolts of 3mm length to complete the assembly
 
 A spacer.stl file is provided for 3d printing, this acts as a spacer for mechanical stability.
-
-
 
 
 
