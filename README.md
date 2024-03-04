@@ -1,34 +1,33 @@
 # qryptr
-Applied cryptography can be complex and vulnerable. Side-channel attacks, spyware, and the complex ecosystem of smartphones hurts security of users.
+If your smartphone is compromised, cryptographic measures will not help you. An adversary will simply read messages from your keyboard or screen. Most cryptography today secures data in-transit.
 
-We introduce a seperate, offline device that contains cryptographic keys, a keyboard, a camera and a screen. Encrypted messages are shared as QR codes using regular smartphones.
+We introduce an offline device that contains cryptographic keys, a keyboard, a camera and a screen. Text messages are encrypted with ECC and displayed as QR codes which can be shared using your smartphone. Because encryption and decryption is done on a seperate device, cryptographic keys cannot be compromised. Plaintext is only written and displayed on a seperate device.
 
-In case the smartphone is compromised, the security of the shared messages is not affected.
+This repository contains all hardware and software to create such a handheld device, which allows text messages of up to 299 characters.
 
-This repository contains all hardware and software to create a handheld device (the "qryptr") that secures text messages of up to 260 characters.
-
+![](./pictures/basic1.jpeg)
 
 # architecture
 ![usage flow](./flow-diagram2.png)
 
-Each user has a single handheld qryptr device.
+Each user has a single handheld device.
 
 Upon receiving the device, the user can generate his/her ECC keypair, her CryptoID.
 
 The public key of the Crypto ID can be displayed onscreen as a QR code. Another user can add that CryptoID by scanning it. This is preferably done in-person.
 
-After adding keys, users can write messages which are encrypted (AEAD), encoded and displayed as QR codes.
+After adding each others' keys, users can write messages which are encrypted, encoded and displayed as QR codes.
 
-Using their smartphones, the users can photograph/share these QR-encoded, encrypted messages over their preferred messaging app, such as Signal or Whatsapp.
+Using their smartphones, the users can photograph/share these QR-codes, which contains the encrypted messages, with their preferred messaging app, such as Signal or Whatsapp.
 
-The receiving user can scan the shared photograph with his/her qryptr device. After selecting the recipient, the device will read, decode, decrypt and display the text message.
+The receiving user can select the sender, scan the shared photograph with his/her qryptr device, which will read, decode, decrypt and display the text message.
+
+![](./pictures/sharemyid.jpeg)
+![](./pictures/readmessage.jpeg)
+
 
 # use cases
--Sharing passwords between system administrators.
-
--Sharing passwords for HSM procedures.
-
--Sharing passwords for crypto wallets.
+-Sharing passwords between system administrators, or for HSM procedures.
 
 -Sharing sensitive information between people.
 
@@ -77,7 +76,14 @@ Using the library manager in the Arduino IDE, install the following libraries:
 ## hardware
 -Add resistor divider to measure the battery voltage
 ## software
--Create a software procedure to initialize the camera
+-Create a software procedure to turn the camera on/off to save power.
+-Implement soft poweroff after timeout.
+-Implement symmetric encryption on the long-term private key of the user. This will require a password prompt for decoding messages.
+-Enable multiple personal ID's (cryptographic keys)
+-Add start and end tags for messages and keys, so that it is clear whether a valid messages/key was received.
+-Use camera without character encoding (raw bytes).
+-Write special characters with ctrl button.
+-On screen arrows to make navigation more intuitive.
 
 # FAQ
 ## hardware
@@ -94,5 +100,16 @@ Q: How about using an epaper display instead of the Sharp display?
 A: It has been considered, but the Sharp display has a higher refresh rate and more pixels, since we need quite large QR codes to get to 240 character messages. The Sharp display still has low energy consumption. It is also very flat and easy to integrate with just a couple of capacitors. The Sharp display is easy to use with the U8G2 library.
 
 ## software
+
+# How to construct
+
+![](./pictures/construction1.jpeg)
+![](./pictures/construction2.jpeg)
+![](./pictures/construction3.jpeg)
+![](./pictures/construction4.jpeg)
+![](./pictures/construction5.jpeg)
+![](./pictures/construction6.jpeg)
+
+
 
 
