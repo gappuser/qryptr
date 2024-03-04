@@ -21,9 +21,9 @@ After adding each others' keys, users can write messages which are encrypted, en
 Using their smartphones, the users can photograph/share these QR-codes, which contains the encrypted messages, with their preferred messaging app, such as Signal or Whatsapp.
 
 The receiving user can select the sender, scan the shared photograph with his/her qryptr device, which will read, decode, decrypt and display the text message.
+<img src="./pictures/sharemyid.jpeg" width="50%" height="50%">
+<img src="./pictures/readmessage.jpeg" width="50%" height="50%">
 
-![](./pictures/sharemyid.jpeg)
-![](./pictures/readmessage.jpeg)
 
 
 # use cases
@@ -102,13 +102,12 @@ A: It has been considered, but the Sharp display has a higher refresh rate and m
 ## software
 
 # How to construct
-
-![](./pictures/construction1.jpeg)
-![](./pictures/construction2.jpeg)
-![](./pictures/construction3.jpeg)
-![](./pictures/construction4.jpeg)
-![](./pictures/construction5.jpeg)
-![](./pictures/construction6.jpeg)
+<img src="./pictures/construction1.jpeg" width="50%" height="50%">
+<img src="./pictures/construction2.jpeg" width="50%" height="50%">
+<img src="./pictures/construction3.jpeg" width="50%" height="50%">
+<img src="./pictures/construction4.jpeg" width="50%" height="50%">
+<img src="./pictures/construction5.jpeg" width="50%" height="50%">
+<img src="./pictures/construction6.jpeg" width="50%" height="50%">
 
 
 
