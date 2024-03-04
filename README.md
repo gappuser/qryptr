@@ -5,7 +5,7 @@ We introduce an offline device that contains cryptographic keys, a keyboard, a c
 
 This repository contains all hardware and software to create such a handheld device, which allows text messages of up to 299 characters.
 
-![](./pictures/basic1.jpeg)
+![](./pictures/basic1.jpeg){:height="200px" width="200px"}.
 
 # architecture
 ![usage flow](./flow-diagram2.png)
