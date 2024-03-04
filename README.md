@@ -21,6 +21,7 @@ After adding each others' keys, users can write messages which are encrypted, en
 Using their smartphones, the users can photograph/share these QR-codes, which contains the encrypted messages, with their preferred messaging app, such as Signal or Whatsapp.
 
 The receiving user can select the sender, scan the shared photograph with his/her qryptr device, which will read, decode, decrypt and display the text message.
+
 <img src="./pictures/sharemyid.jpeg" width="50%" height="50%">
 <img src="./pictures/readmessage.jpeg" width="50%" height="50%">
 
