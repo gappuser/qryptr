@@ -1,7 +1,6 @@
 # qryptr
-If your smartphone is compromised, cryptographic measures will not help you. An adversary will simply read messages from your keyboard or screen. Most cryptography today secures data in-transit.
 
-We introduce an offline device that contains cryptographic keys, a keyboard, a camera and a screen. Text messages are encrypted with ECC and displayed as QR codes which can be shared using your smartphone. Because encryption and decryption is done on a seperate device, cryptographic keys cannot be compromised. Plaintext is only written and displayed on a seperate device.
+We introduce an offline device that contains cryptographic keys, a keyboard, a camera and a screen. Text messages are encrypted with ECC and displayed as QR codes which can be shared using your smartphone. Because encryption and decryption is done on a seperate device, cryptographic keys cannot be compromised. Plaintext is only written and displayed on this seperate device. This protects smartphone users against advanced actors employing spyware.
 
 This repository contains all hardware and software to create such a handheld device, which allows text messages of up to 299 characters.
 
@@ -57,6 +56,8 @@ You also need M2 nuts and M2 bolts of 3mm length to complete the assembly
 
 A spacer.stl file is provided for 3d printing, this acts as a spacer for mechanical stability.
 
+We use a 302040 lipo battery https://www.aliexpress.com/item/33009055815.html
+
 
 
 ## software
@@ -76,6 +77,8 @@ Using the library manager in the Arduino IDE, install the following libraries:
 # todos
 ## hardware
 -Add resistor divider to measure the battery voltage
+-Expose SWD pins on PCB to enable loading the software through SWD pins. This will allow us to disconnect the datalines from the USB port and prevent an attack vector.
+
 ## software
 -Create a software procedure to turn the camera on/off to save power.
 -Implement soft poweroff after timeout.
@@ -98,18 +101,31 @@ A: Yes, it could be done, although a singular PCB would need double-sided PCB as
 
 Q: How about using an epaper display instead of the Sharp display?
 
-A: It has been considered, but the Sharp display has a higher refresh rate and more pixels, since we need quite large QR codes to get to 240 character messages. The Sharp display still has low energy consumption. It is also very flat and easy to integrate with just a couple of capacitors. The Sharp display is easy to use with the U8G2 library.
+A: It has been considered, but the Sharp display has a higher refresh rate and more pixels, since we need quite large QR codes to get to 299 character messages. The Sharp display still has low energy consumption. It is also very flat and easy to integrate with just a couple of capacitors. The Sharp display is easy to use with the U8G2 library.
 
 ## software
 
-# How to construct
+# Construction
+Place the battery and solder the wires as shown below to the pads.
 <img src="./pictures/construction1.jpeg" width="50%" height="50%">
+
+Place the 3d printed spacer as shown below, insert the m2 nuts with some glue.
 <img src="./pictures/construction2.jpeg" width="50%" height="50%">
+
+Connect the 18 pin keyboard connector as shown below, place the GM-803 camera module and connect with the 12 pin ffc connector cable.
 <img src="./pictures/construction3.jpeg" width="50%" height="50%">
+
+Place the screen as shown below.
 <img src="./pictures/construction4.jpeg" width="50%" height="50%">
+
+Solder the frontplate 18 pin connector (or order an assembled frontplate from JLCPCB), and connect it. Soldering can be a bit tricky.
 <img src="./pictures/construction5.jpeg" width="50%" height="50%">
+
+Use the m2 3mm bolts to screw the frontplate down.
 <img src="./pictures/construction6.jpeg" width="50%" height="50%">
 
+# How to upload software
 
+Connect with PC through USB, turn on device, upload arduino sketch main.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
 
 
