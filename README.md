@@ -1,23 +1,22 @@
 # qryptr
 
-We introduce an offline device that contains cryptographic keys, a keyboard, a camera and a screen. Text messages are encrypted with ECC and displayed as QR codes which can be shared using your smartphone. Because encryption and decryption is done on a seperate device, cryptographic keys cannot be compromised. Plaintext is only written and displayed on this seperate device. This protects smartphone users against advanced actors employing spyware.
+We introduce an offline device that contains cryptographic software, a keyboard, camera and screen. Plain text messages are ECC encrypted and subsequently displayed as QR codes which can be photographed and shared using your smartphone. Because encryption and decryption is done on a seperate device, cryptographic keys cannot be compromised. Plaintext is only written and displayed on this seperate device. This protects smartphone users against advanced threats, spyware and side-channel attacks.
 
 This repository contains all hardware and software to create such a handheld device, which allows text messages of up to 299 characters.
 
 <img src="./pictures/basic1.jpeg" width="50%" height="50%">
 
 # architecture
+
 ![usage flow](./flow-diagram2.png)
 
-Each user has a single handheld device.
+Each user has a qryptr device. Upon receiving it, the user can generate his/her ECC keypair, also called the Cryptographic ID (CryptoID).
 
-Upon receiving the device, the user can generate his/her ECC keypair, her CryptoID.
-
-The public key of the Crypto ID can be displayed onscreen as a QR code. Another user can add that CryptoID by scanning it. This is preferably done in-person.
+The public key of the CryptoID can be displayed onscreen as a QR code. Another user can add that CryptoID by scanning it. This is preferably done in-person.
 
 After adding each others' keys, users can write messages which are encrypted, encoded and displayed as QR codes.
 
-Using their smartphones, the users can photograph/share these QR-codes, which contains the encrypted messages, with their preferred messaging app, such as Signal or Whatsapp.
+Using their smartphones, the users can photograph/share these QR-codes, which contains the encrypted messages, with their preferred messaging app, such as Signal, Whatsapp, Telegram or Viber.
 
 The receiving user can select the sender, scan the shared photograph with his/her qryptr device, which will read, decode, decrypt and display the text message.
 
@@ -35,9 +34,9 @@ The receiving user can select the sender, scan the shared photograph with his/he
 ## hardware
 We chose a microcontroller platform to minimize platform complexity: the RP2040.
 
-QR codes are read using a hardware camera, the GM-803. 
+QR codes are read using a hardware camera, the GM-803, available on aliexpress.
 
-We are using the Sharp LS027B7DH01 display. 
+We are using the Sharp LS027B7DH01 display, available on aliexpress. 
 
 Hardware designs are available in the /hardware folder. These can be used to improve the design or to order the hardware on jlcpcb.com directly.
 Alternatively, you can view these at the following urls:
@@ -52,19 +51,18 @@ Some parts needs to be ordered seperately from lscs.com
 
 -LCSC#: C5151979 12P Opposite Side 5cm P=0.5mm flat flexible cable to connect the GM-803 camera to the mainplate
 
-You also need M2 nuts and M2 bolts of 3mm length to complete the assembly
+You also need M2 nuts and M2 bolts of 3mm length to complete the assembly.
 
 A spacer.stl file is provided for 3d printing, this acts as a spacer for mechanical stability.
 
-We use a 302040 lipo battery https://www.aliexpress.com/item/33009055815.html
+We used a 302040 lipo battery: https://www.aliexpress.com/item/33009055815.html
 
 
 
 ## software
 We use the Arduino IDE.
 
-Go to the board manager and install Arduino mbed OS RP2040 Boards (3.5.4)
-this should set target_platform=mbed_rp2040 in preferences.txt for the arduino IDE
+Go to the board manager and install Arduino mbed OS RP2040 Boards (3.5.4). This should set target_platform=mbed_rp2040 in preferences.txt for the arduino IDE.
 
 We use the Arduino mbed_rp2040 target platform, because we want to use the Sharp LS027B7DH01 display, and the earle philhower core does not allow changing the HW SPI pin assignment. We want to use different pins for driving the SPI display in the u8g2 display constructor, because the original pin assignment is very slow.
 
@@ -72,6 +70,10 @@ Using the library manager in the Arduino IDE, install the following libraries:
 -QRCode by Richard Moore (https://github.com/ricmoo/qrcode/)
 -U8G2 by Oliver Kraus (https://github.com/olikraus/u8g2)
 -Crypto by Rhys Weatherley and Brandon Wiley (https://github.com/OperatorFoundation/Crypto)
+
+# How to upload software
+
+Connect with PC through USB, turn on device, upload arduino sketch main.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
 
 
 # todos
@@ -124,8 +126,6 @@ Solder the frontplate 18 pin connector (or order an assembled frontplate from JL
 Use the m2 3mm bolts to screw the frontplate down.
 <img src="./pictures/construction6.jpeg" width="50%" height="50%">
 
-# How to upload software
 
-Connect with PC through USB, turn on device, upload arduino sketch main.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
 
 
