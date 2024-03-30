@@ -38,9 +38,13 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 
 
 # use cases
--Sharing passwords between system administrators, or for HSM procedures.
+-Sharing passwords between system administrators
 
--Sharing sensitive information between people.
+-Sharing passwords for crypto wallets
+
+-Sharing key material or passwords for HSM procedures.
+
+-Sharing sensitive information.
 
 # implementation
 ## hardware
@@ -51,8 +55,12 @@ QR codes are read using a hardware camera, the GM-803, available on aliexpress.
 We are using the Sharp LS027B7DH01 display, available on aliexpress. 
 
 Hardware designs are available in the /hardware folder. These can be used to improve the design or to order the hardware on jlcpcb.com directly.
-Alternatively, you can view these at the following urls:
+
+
+Alternatively, you can view or clone these at the following urls:
+
 https://oshwlab.com/thomas255/mainplate-public
+
 https://oshwlab.com/thomas255/frontplate-public
 
 
