@@ -135,7 +135,7 @@ Solder the frontplate 18 pin connector (or order an assembled frontplate from JL
 
 Use the m2 3mm bolts to screw the frontplate down.
 
-<img src="./pictures/construction66.png" width="50%" height="50%">
+<img src="./pictures/construction66.png" width="30%" height="30%">
 
 
 
