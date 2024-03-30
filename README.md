@@ -4,7 +4,7 @@ We introduce an offline device that contains cryptographic software, a keyboard,
 
 This repository contains all hardware and software to create such a handheld device, which allows text messages of up to 299 characters.
 
-<img src="./pictures/basic1.jpeg" width="50%" height="50%">
+<img src="./pictures/basic11.jpeg" width="50%" height="50%">
 
 # architecture
 
@@ -20,8 +20,8 @@ Using their smartphones, the users can photograph/share these QR-codes, which co
 
 The receiving user can select the sender, scan the shared photograph with his/her qryptr device, which will read, decode, decrypt and display the text message.
 
-<img src="./pictures/sharemyid.jpeg" width="50%" height="50%">
-<img src="./pictures/readmessage.jpeg" width="50%" height="50%">
+<img src="./pictures/sharemyid1.jpeg" width="50%" height="50%">
+<img src="./pictures/readmessage1.jpeg" width="50%" height="50%">
 
 
 
@@ -109,22 +109,22 @@ A: It has been considered, but the Sharp display has a higher refresh rate and m
 
 # Construction
 Place the battery and solder the wires as shown below to the pads.
-<img src="./pictures/construction1.jpeg" width="50%" height="50%">
+<img src="./pictures/construction11.jpeg" width="50%" height="50%">
 
 Place the 3d printed spacer as shown below, insert the m2 nuts with some glue.
-<img src="./pictures/construction2.jpeg" width="50%" height="50%">
+<img src="./pictures/construction22.jpeg" width="50%" height="50%">
 
 Connect the 18 pin keyboard connector as shown below, place the GM-803 camera module and connect with the 12 pin ffc connector cable.
-<img src="./pictures/construction3.jpeg" width="50%" height="50%">
+<img src="./pictures/construction33.jpeg" width="50%" height="50%">
 
 Place the screen as shown below.
-<img src="./pictures/construction4.jpeg" width="50%" height="50%">
+<img src="./pictures/construction44.jpeg" width="50%" height="50%">
 
 Solder the frontplate 18 pin connector (or order an assembled frontplate from JLCPCB), and connect it. Soldering can be a bit tricky.
-<img src="./pictures/construction5.jpeg" width="50%" height="50%">
+<img src="./pictures/construction55.jpeg" width="50%" height="50%">
 
 Use the m2 3mm bolts to screw the frontplate down.
-<img src="./pictures/construction6.jpeg" width="50%" height="50%">
+<img src="./pictures/construction66.jpeg" width="50%" height="50%">
 
 
 
