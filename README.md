@@ -8,17 +8,17 @@ This repository contains all hardware and software to create such a handheld dev
 
 # architecture
 
+Each user has a qryptr device. Upon receiving their device, the user can generate his/her ECC keypair. The user's ECC keypair uniquely identifies him/her, that is why it is referred to as the user ID.
+
+The public key of the user ID can be displayed onscreen as a QR code. Another user can add that user ID scanning it. This is preferably done in-person, not remotely, to prevent man-in-the-middle attacks. 
+
+After two users have added each others' keys, they can write text messages which are ECC encrypted, Base64 encoded and displayed as QR codes.
+
+Using their smartphones, users can photograph/share these QR-codes with their preferred messaging app, such as Signal, Whatsapp, Telegram or Viber.
+
+The receiving user can scan the QR code with his/her qryptr device, which will read, decode, decrypt and display the text message.
+
 ![usage flow](./flow-diagram2.png)
-
-Each user has a qryptr device. Upon receiving it, the user can generate his/her ECC keypair, also called the Cryptographic ID (CryptoID).
-
-The public key of the CryptoID can be displayed onscreen as a QR code. Another user can add that CryptoID by scanning it. This is preferably done in-person.
-
-After adding each others' keys, users can write messages which are encrypted, encoded and displayed as QR codes.
-
-Using their smartphones, the users can photograph/share these QR-codes, which contains the encrypted messages, with their preferred messaging app, such as Signal, Whatsapp, Telegram or Viber.
-
-The receiving user can select the sender, scan the shared photograph with his/her qryptr device, which will read, decode, decrypt and display the text message.
 
 <img src="./pictures/sharemyid1.png" width="60%" height="60%">
 
