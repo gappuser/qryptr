@@ -38,15 +38,15 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 
 
 # Use cases
--Sharing passwords between system administrators
+-Sharing passwords between system administrators.
 
--Sharing passwords for crypto wallets
+-Sharing passwords for crypto wallets.
 
 -Sharing key material or passwords for HSM procedures.
 
 -Sharing sensitive information.
 
--Thwart spyware or advanced threats
+-Thwart spyware or advanced threats.
 
 # Implementation
 ## hardware
