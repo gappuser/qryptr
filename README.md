@@ -37,7 +37,7 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 
 
 
-# use cases
+# Use cases
 -Sharing passwords between system administrators
 
 -Sharing passwords for crypto wallets
@@ -46,7 +46,9 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 
 -Sharing sensitive information.
 
-# implementation
+-Thwart spyware or advanced threats
+
+# Implementation
 ## hardware
 We chose a microcontroller platform to minimize platform complexity: the RP2040.
 
@@ -87,28 +89,38 @@ Go to the board manager and install Arduino mbed OS RP2040 Boards (3.5.4). This 
 We use the Arduino mbed_rp2040 target platform, because we want to use the Sharp LS027B7DH01 display, and the earle philhower core does not allow changing the HW SPI pin assignment. We want to use different pins for driving the SPI display in the u8g2 display constructor, because the original pin assignment is very slow.
 
 Using the library manager in the Arduino IDE, install the following libraries:
+
 -QRCode by Richard Moore (https://github.com/ricmoo/qrcode/)
+
 -U8G2 by Oliver Kraus (https://github.com/olikraus/u8g2)
+
 -Crypto by Rhys Weatherley and Brandon Wiley (https://github.com/OperatorFoundation/Crypto)
 
-# How to upload software
-
-Connect with PC through USB, turn on device, upload arduino sketch main.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
+To upload the software, connect with PC through USB, turn on device, upload arduino sketch main.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
 
 
-# todos
+# Todos
 ## hardware
 -Add resistor divider to measure the battery voltage
+
 -Expose SWD pins on PCB to enable loading the software through SWD pins. This will allow us to disconnect the datalines from the USB port and prevent an attack vector.
+
 
 ## software
 -Create a software procedure to turn the camera on/off to save power.
+
 -Implement soft poweroff after timeout.
+
 -Implement symmetric encryption on the long-term private key of the user. This will require a password prompt for decoding messages.
+
 -Enable multiple personal ID's (cryptographic keys)
--Add start and end tags for messages and keys, so that it is clear whether a valid messages/key was received.
+
+-Add start and end tags for messages and keys, so that it is clear whether a valid messages/key was received. This will prevent bad reads from crashing the device as well.
+
 -Use camera without character encoding (raw bytes).
--Write special characters with ctrl button.
+
+-Write special characters (diacritics) with ctrl button.
+
 -On screen arrows to make navigation more intuitive.
 
 # FAQ
@@ -125,7 +137,6 @@ Q: How about using an epaper display instead of the Sharp display?
 
 A: It has been considered, but the Sharp display has a higher refresh rate and more pixels, since we need quite large QR codes to get to 299 character messages. The Sharp display still has low energy consumption. It is also very flat and easy to integrate with just a couple of capacitors. The Sharp display is easy to use with the U8G2 library.
 
-## software
 
 # Construction
 Place the battery and solder the wires as shown below to the pads.
