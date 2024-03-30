@@ -6,9 +6,9 @@ This repository contains all hardware and software to create such a handheld dev
 
 <img src="./pictures/basic11.png" width="30%" height="30%">
 
-# architecture
+# How it works
 
-Each user has a qryptr device. Upon receiving their device, the user can generate his/her ECC keypair. The user's ECC keypair uniquely identifies him/her, that is why it is referred to as the user ID.
+Each user has a qryptr device. Upon receiving it, the user can generate his/her ECC keypair. The user's ECC keypair uniquely identifies him/her, that is why it is referred to as the user ID.
 
 The public key of the user ID can be displayed onscreen as a QR code. Another user can add that user ID scanning it. This is preferably done in-person, not remotely, to prevent man-in-the-middle attacks. 
 
@@ -20,7 +20,16 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 
 ![usage flow](./flow-diagram2.png)
 
+## Share and add IDs
+
+<img src="./pictures/setup.png" width="60%" height="60%">
+
 <img src="./pictures/sharemyid1.png" width="60%" height="60%">
+
+
+## Write and read messages
+
+<img src="./pictures/regular.png" width="60%" height="60%">
 
 <img src="./pictures/readmessage1.png" width="60%" height="60%">
 
