@@ -4,7 +4,7 @@ We introduce an offline device that contains cryptographic software, a keyboard,
 
 This repository contains all hardware and software to create such a handheld device, which allows text messages of up to 299 characters.
 
-<img src="./pictures/basic11.png" width="50%" height="50%">
+<img src="./pictures/basic11.png" width="30%" height="30%">
 
 # architecture
 
@@ -20,8 +20,9 @@ Using their smartphones, the users can photograph/share these QR-codes, which co
 
 The receiving user can select the sender, scan the shared photograph with his/her qryptr device, which will read, decode, decrypt and display the text message.
 
-<img src="./pictures/sharemyid1.png" width="50%" height="50%">
-<img src="./pictures/readmessage1.png" width="50%" height="50%">
+<img src="./pictures/sharemyid1.png" width="60%" height="60%">
+
+<img src="./pictures/readmessage1.png" width="60%" height="60%">
 
 
 
