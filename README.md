@@ -109,22 +109,34 @@ A: It has been considered, but the Sharp display has a higher refresh rate and m
 
 # Construction
 Place the battery and solder the wires as shown below to the pads.
+
 <img src="./pictures/construction11.png" width="50%" height="50%">
 
+
 Place the 3d printed spacer as shown below, insert the m2 nuts with some glue.
+
 <img src="./pictures/construction22.png" width="50%" height="50%">
 
+
 Connect the 18 pin keyboard connector as shown below, place the GM-803 camera module and connect with the 12 pin ffc connector cable.
+
 <img src="./pictures/construction33.png" width="50%" height="50%">
 
+
 Place the screen as shown below.
+
 <img src="./pictures/construction44.png" width="50%" height="50%">
 
+
 Solder the frontplate 18 pin connector (or order an assembled frontplate from JLCPCB), and connect it. Soldering can be a bit tricky.
+
 <img src="./pictures/construction55.png" width="50%" height="50%">
 
+
 Use the m2 3mm bolts to screw the frontplate down.
+
 <img src="./pictures/construction66.png" width="50%" height="50%">
+
 
 
 
