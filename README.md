@@ -36,6 +36,14 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 <img src="./pictures/readmessage1.png" width="60%" height="60%">
 
 
+<img src="./pictures/writemessage.gif" width="60%" height="60%">
+
+
+<img src="./pictures/readmessage.gif" width="60%" height="60%">
+
+
+
+
 
 # Use cases
 -Sharing passwords between system administrators.
@@ -50,11 +58,11 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 
 # Implementation
 ## hardware
-We chose a microcontroller platform to minimize platform complexity: the RP2040.
+We chose a microcontroller platform to minimize platform complexity and dependencies: the RP2040.
 
 QR codes are read using a hardware camera, the GM803, available on aliexpress. Get the GM803-S version with short focal range.
 
-We are using the Sharp LS027B7DH01 display, available on aliexpress. 
+We are using the Sharp LS027B7DH01 display, available on aliexpress. Other u8g2 supported display could be used as well.
 
 Hardware designs are available in the /hardware folder. These can be used to improve the design or to order the hardware on jlcpcb.com directly.
 
