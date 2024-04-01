@@ -17,7 +17,7 @@ After two users have added each others' keys, they can write text messages which
 
 Using their smartphones, users can photograph/share these QR-codes with their preferred messaging app, such as Signal, Whatsapp, Telegram or Viber.
 
-The receiving user can scan the QR code with his/her qryptr device, which will read, decode, decrypt and display the text message.
+The receiving user can scan the QR code with his/her qryptr device, which will read, decode, decrypt and display the text message. The recommended read distance is 10 cm between smartphone screen and camera. The letter "Z" is marked on the frontpanel to help a user center the qr code in front of the camera.
 
 
 ### Share and add IDs
@@ -136,6 +136,13 @@ A: Yes, it could be done, although a singular PCB would need double-sided PCB as
 Q: How about using an epaper display instead of the Sharp display?
 
 A: It has been considered, but the Sharp display has a higher refresh rate and more pixels, since we need quite large QR codes to get to 299 character messages. The Sharp display still has low energy consumption. It is also very flat and easy to integrate with just a couple of capacitors. The Sharp display is easy to use with the U8G2 library.
+
+## software
+Q: How is encryption done?
+
+A: Documented in the code, but largely according to the procedure described here with ECC curve 25519:
+
+https://crypto.stackexchange.com/questions/101420/eccdh-direct-or-with-temporary-ecc-keypairs
 
 
 # Construction
