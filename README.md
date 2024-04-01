@@ -140,7 +140,7 @@ A: It has been considered, but the Sharp display has a higher refresh rate and m
 ## software
 Q: How is encryption done?
 
-A: Documented in the code, but largely according to the procedure described here with ECC curve 25519:
+A: Documented in the code, but largely according to the procedure described here with ECC curve25519:
 
 https://crypto.stackexchange.com/questions/101420/eccdh-direct-or-with-temporary-ecc-keypairs
 
