@@ -36,10 +36,10 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 <img src="./pictures/readmessage1.png" width="60%" height="60%">
 
 
-<img src="./images/writemessage.gif" width="60%" height="60%">
+<img src="./images/writemessage.gif" width="40%" height="40%">
 
 
-<img src="./images/readmessage3.gif" width="60%" height="60%">
+<img src="./images/readmessage3.gif" width="40%" height="40%">
 
 
 
