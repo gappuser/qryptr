@@ -4,7 +4,7 @@ We introduce an offline device that contains cryptographic software, a keyboard,
 
 This repository contains all hardware and software to create such a handheld device, which allows text messages of up to 299 characters.
 
-<img src="./pictures/basic11.png" width="30%" height="30%">
+<img src="./images/basic11.png" width="30%" height="30%">
 
 
 # How it works
@@ -22,18 +22,18 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 
 ### Share and add IDs
 
-<img src="./pictures/setup.png" width="60%" height="60%">
+<img src="./images/setup.png" width="60%" height="60%">
 
 
-<img src="./pictures/sharemyid1.png" width="60%" height="60%">
+<img src="./images/sharemyid1.png" width="60%" height="60%">
 
 
 ### Write and read messages
 
-<img src="./pictures/regular.png" width="60%" height="60%">
+<img src="./images/regular.png" width="60%" height="60%">
 
 
-<img src="./pictures/readmessage1.png" width="60%" height="60%">
+<img src="./images/readmessage1.png" width="60%" height="60%">
 
 
 <img src="./images/writemessage.gif" width="40%" height="40%">
@@ -156,32 +156,32 @@ https://crypto.stackexchange.com/questions/101420/eccdh-direct-or-with-temporary
 # Construction
 Place the battery and solder the wires as shown below to the pads.
 
-<img src="./pictures/construction11.png" width="50%" height="50%">
+<img src="./images/construction11.png" width="50%" height="50%">
 
 
 Place the 3d printed spacer as shown below, insert the m2 nuts with some glue.
 
-<img src="./pictures/construction22.png" width="50%" height="50%">
+<img src="./images/construction22.png" width="50%" height="50%">
 
 
 Connect the 18 pin keyboard connector as shown below, place the GM-803 camera module and connect with the 12 pin ffc connector cable.
 
-<img src="./pictures/construction33.png" width="50%" height="50%">
+<img src="./images/construction33.png" width="50%" height="50%">
 
 
 Place the screen as shown below.
 
-<img src="./pictures/construction44.png" width="50%" height="50%">
+<img src="./images/construction44.png" width="50%" height="50%">
 
 
 Solder the frontplate 18 pin connector (or order an assembled frontplate from JLCPCB), and connect it. Soldering can be a bit tricky.
 
-<img src="./pictures/construction55.png" width="50%" height="50%">
+<img src="./images/construction55.png" width="50%" height="50%">
 
 
 Use the m2 3mm bolts to screw the frontplate down.
 
-<img src="./pictures/construction66.png" width="30%" height="30%">
+<img src="./images/construction66.png" width="30%" height="30%">
 
 
 
