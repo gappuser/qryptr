@@ -1,6 +1,6 @@
 # qryptr
 
-We introduce an offline device that contains cryptographic software, a keyboard, camera and screen. Plain text messages are ECC encrypted and subsequently displayed as QR codes which can be photographed and shared using your smartphone. Because encryption and decryption is done on a seperate device, cryptographic keys cannot be compromised. Plaintext is only written and displayed on this seperate device. This protects smartphone users against advanced threats, spyware and side-channel attacks.
+We introduce an offline device that contains cryptographic software, a keyboard, camera and screen. Plain text messages are ECC encrypted and subsequently displayed as QR codes which can be photographed and shared using your smartphone. Because encryption and decryption is done on a seperate device, cryptographic keys cannot be compromised. Plaintext is only written and displayed on this seperate device. This protects smartphone users against advanced threats, spyware, backdoors and side-channel attacks.
 
 This repository contains all hardware and software to create such a handheld device, which allows text messages of up to 299 characters.
 
@@ -52,7 +52,7 @@ The receiving user can scan the QR code with his/her qryptr device, which will r
 ## hardware
 We chose a microcontroller platform to minimize platform complexity: the RP2040.
 
-QR codes are read using a hardware camera, the GM-803, available on aliexpress.
+QR codes are read using a hardware camera, the GM803, available on aliexpress. Get the GM803-S version with short focal range.
 
 We are using the Sharp LS027B7DH01 display, available on aliexpress. 
 
