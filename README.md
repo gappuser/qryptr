@@ -1,4 +1,4 @@
-# qryptr
+# qryptr - airgapped ecc text messenger
 
 We introduce an offline device that contains cryptographic software, a keyboard, camera and screen. Plain text messages are ECC encrypted and subsequently displayed as QR codes which can be photographed and shared using your smartphone. Because encryption and decryption is done on a seperate device, cryptographic keys cannot be compromised. Plaintext is only written and displayed on this seperate device. This protects smartphone users against advanced threats, spyware, backdoors and side-channel attacks.
 
