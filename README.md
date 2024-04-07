@@ -80,7 +80,9 @@ https://oshwlab.com/thomas255/mainplate-public
 https://oshwlab.com/thomas255/frontplate-public
 
 
-Some parts needs to be ordered seperately from lscs.com
+Some parts needs to be ordered seperately from lscs.com:
+
+
 -LCSC#: C2911889 Clamshell 18P Bottom Contact Surface Mount FFC connector.
 We used one sided assembly at JLCPCB to save costs. This part can be soldered manually, or alternatively, two sided assembly can be used at JLCPCB, in which case this part does not need to be ordered seperately.
 
@@ -90,11 +92,14 @@ We used one sided assembly at JLCPCB to save costs. This part can be soldered ma
 
 -LCSC#: C5151979 12P Opposite Side 5cm P=0.5mm flat flexible cable to connect the GM-803 camera to the mainplate
 
--M2 nuts and M2 bolts of 3mm length to complete the assembly.
 
-A spacer.stl file is provided for 3d printing, this acts as a spacer for mechanical stability and assembly.
+-M2 nuts and M2 bolts of 3mm length.
 
-We used a 302040 lipo battery: https://www.aliexpress.com/item/33009055815.html
+
+-A plastic spacer between the mainplate and frontplate, for mechanical stability and assembly, which can be 3d printed with the provided spacer.stl file.
+
+
+-A 302040 lipo battery: https://www.aliexpress.com/item/33009055815.html
 
 
 
