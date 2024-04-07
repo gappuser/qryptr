@@ -75,12 +75,9 @@ Alternatively, you can view or clone these at the following urls to make adjustm
 
 
 https://oshwlab.com/thomas255/mainplate-public (click "clone") 
-
-
+<img align="right" src="./images/clone2.png" width="15%" height="15%">
 https://oshwlab.com/thomas255/frontplate-public (click "clone")
 
-
-<img src="./images/clone2.png" width="15%" height="15%">
 
 
 Some parts needs to be ordered seperately from lscs.com:
