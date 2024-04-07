@@ -1,13 +1,19 @@
 # qryptr - airgapped ecc text messenger
 
-We introduce an offline device that contains cryptographic software, a keyboard, camera and screen. Plain text messages are ECC encrypted and subsequently displayed as QR codes which can be photographed and shared using your smartphone. Because encryption and decryption is done on a seperate device, cryptographic keys cannot be compromised. Plaintext is only written and displayed on this seperate device. This protects smartphone users against advanced threats, spyware, backdoors and side-channel attacks.
+Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)?
+	
+We introduce a simple airgapped device to counter such threats.
+ 
+Plain text messages are ECC encrypted and sharedd as QR codes using your smartphone. 
 
-This repository contains all hardware and software to create such a handheld device, which allows text messages of up to 299 characters.
+Encryption and decryption is done on an airgapped device, therefore cryptographic keys cannot easily be compromised and plaintext cannot be read using key capture or screen capture.
+
 
 <img src="./images/basic11.png" width="30%" height="30%">
 
 
 # How it works
+The device has cryptographic software, a keyboard, camera and screen. 
 
 Each user has a qryptr device. Upon receiving it, the user can generate his/her ECC keypair. The user's ECC keypair uniquely identifies him/her, that is why it is referred to as the user ID.
 
