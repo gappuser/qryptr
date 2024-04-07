@@ -81,6 +81,7 @@ https://oshwlab.com/thomas255/frontplate-public (click "clone")
 
 
 
+
 Some parts needs to be ordered seperately from lscs.com:
 
 
