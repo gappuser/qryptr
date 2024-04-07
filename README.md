@@ -74,8 +74,9 @@ Hardware designs are available in the /hardware folder. With the Gerber, BOM and
 Alternatively, you can view or clone these at the following urls to make adjustments.
 
 
-https://oshwlab.com/thomas255/mainplate-public (click "clone") 
-<img align="right" src="./images/clone2.png" width="15%" height="15%">
+https://oshwlab.com/thomas255/mainplate-public (click "clone")  <img align="right" src="./images/clone2.png" width="20%" height="20%">
+
+
 https://oshwlab.com/thomas255/frontplate-public (click "clone")
 
 
