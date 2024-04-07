@@ -174,7 +174,7 @@ A: Using the arduino Crypto library, with 32 byte ECC curve25519 keys, using Cha
 https://crypto.stackexchange.com/questions/101420/eccdh-direct-or-with-temporary-ecc-keypairs
 
 
-# Construction
+# Assembly
 Place the battery and solder the wires as shown below to the pads.
 
 <img src="./images/construction11.png" width="50%" height="50%">
