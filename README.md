@@ -80,10 +80,6 @@ https://oshwlab.com/thomas255/mainplate-public (click "clone")  <img align="righ
 https://oshwlab.com/thomas255/frontplate-public (click "clone")
 
 
-
-
-
-
 Some parts needs to be ordered seperately from lscs.com:
 
 
