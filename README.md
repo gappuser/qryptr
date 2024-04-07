@@ -1,13 +1,8 @@
 # qryptr - airgapped ecc text messenger
 
-Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)?
-	
-We introduce a simple airgapped device to counter such threats.
- 
-Plain text messages are ECC encrypted and sharedd as QR codes using your smartphone. 
+Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing)) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)? These routinely circumvent end-to-end encryption through keyloggers, screen capture and compromised keys. We introduce a simple airgapped device to counter such threats. Plain text messages are ECC encrypted and displayed as QR codes on this device. These QR codes can be photographed and shared using your smartphone. This method offers additional endpoint security.
 
-Encryption and decryption is done on an airgapped device, therefore cryptographic keys cannot easily be compromised and plaintext cannot be read using key capture or screen capture.
-
+This repository contains all hardware and software to create such a device, which allows text messages of up to 299 characters.
 
 <img src="./images/basic11.png" width="30%" height="30%">
 
@@ -19,11 +14,11 @@ Each user has a qryptr device. Upon receiving it, the user can generate his/her 
 
 The public key of the user ID can be displayed onscreen as a QR code. Another user can add that user ID scanning it. This is preferably done in-person, not remotely, to prevent man-in-the-middle attacks. 
 
-After two users have added each others' keys, they can write text messages which are ECC encrypted, Base64 encoded and displayed as QR codes.
+After two users have added each others' ID's, they can write text messages which are ECC encrypted, Base64 encoded and displayed as QR codes.
 
-Using their smartphones, users can photograph/share these QR-codes with their preferred messaging app, such as Signal, Whatsapp, Telegram or Viber.
+Using their smartphones, users can photograph/share these QR-codes with their preferred messaging app, such as Signal, Whatsapp, Telegram, Viber, or even email or print the QR codes.
 
-The receiving user can scan the QR code with his/her qryptr device, which will read, decode, decrypt and display the text message. The recommended read distance is 10 cm between smartphone screen and camera. The letter "Z" is marked on the frontpanel to help a user center the qr code in front of the camera.
+The recipient can scan the QR code with his/her qryptr device, which will read, decode, decrypt and display the text message. The recommended read distance is 10 cm between smartphone screen and camera. The letter "Z" is marked on the frontpanel to help a user center the qr code in front of the camera.
 
 
 ### Share and add IDs
@@ -96,7 +91,7 @@ We used a 302040 lipo battery: https://www.aliexpress.com/item/33009055815.html
 
 
 ## software
-We use the Arduino IDE.
+We use the Arduino IDE to upload ./software/qryptr.ino
 
 Go to the board manager and install Arduino mbed OS RP2040 Boards (3.5.4). This should set target_platform=mbed_rp2040 in preferences.txt for the arduino IDE.
 
@@ -110,7 +105,7 @@ Using the library manager in the Arduino IDE, install the following libraries:
 
 -Crypto by Rhys Weatherley and Brandon Wiley (https://github.com/OperatorFoundation/Crypto)
 
-To upload the software, connect with PC through USB, turn on device, upload arduino sketch main.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
+To upload the software, connect with PC through USB, turn on device, upload ./software/qryptr.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
 
 
 # Todos
