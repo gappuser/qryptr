@@ -84,7 +84,9 @@ Some parts needs to be ordered seperately from lscs.com:
 
 
 -LCSC#: C2911889 Clamshell 18P Bottom Contact Surface Mount FFC connector.
-We used one sided assembly at JLCPCB to save costs. This part can be soldered manually, or alternatively, two sided assembly can be used at JLCPCB, in which case this part does not need to be ordered seperately.
+
+We used one sided assembly at JLCPCB to save costs. 
+This part can be soldered manually, or alternatively, two sided assembly can be used at JLCPCB, in which case this part does not need to be ordered seperately.
 
 
 -LCSC#: C2857713 18P Opposite Side 5cm P=0.5mm flat flexible cable to connect the frontplate (keyboard) with the mainplate
@@ -165,7 +167,7 @@ A: It has been considered, but the Sharp display has a higher refresh rate and m
 ## software
 Q: How is encryption done?
 
-A: Documented in the code, but largely according to the procedure described here with ECC curve25519:
+A: Using the arduino Crypto library, and documented in the code, according to the procedure described here with ECC curve25519:
 
 https://crypto.stackexchange.com/questions/101420/eccdh-direct-or-with-temporary-ecc-keypairs
 
@@ -191,7 +193,7 @@ Place the screen as shown below.
 <img src="./images/construction44.png" width="50%" height="50%">
 
 
-Solder the frontplate 18 pin connector (or order an assembled frontplate from JLCPCB), and connect it. Soldering can be a bit tricky.
+Solder the frontplate 18 pin connector (or order an assembled frontplate from JLCPCB), and connect it. Soldering this 0.5mm pitch connector can be a bit tricky.
 
 <img src="./images/construction55.png" width="50%" height="50%">
 
