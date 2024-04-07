@@ -125,6 +125,8 @@ Using the library manager in the Arduino IDE, install the following libraries:
 
 To upload the software, connect with PC through USB, turn on device, upload ./software/qryptr.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
 
+Once uploaded, navigate the menu with the arrow buttons (left, right, up, down). There is no enter key. To select an option, use the right arrow. You can always go back with left arrow or interrupt reading by pressing any key.
+
 
 # Todos
 ## hardware
@@ -167,7 +169,7 @@ A: It has been considered, but the Sharp display has a higher refresh rate and m
 ## software
 Q: How is encryption done?
 
-A: Using the arduino Crypto library, and documented in the code, according to the procedure described here with ECC curve25519:
+A: Using the arduino Crypto library, with 32 byte ECC curve25519 keys, using ChaChaPoly cipher. Documented in the code, according to the procedure described here:
 
 https://crypto.stackexchange.com/questions/101420/eccdh-direct-or-with-temporary-ecc-keypairs
 
