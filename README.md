@@ -1,6 +1,6 @@
 # qryptr - airgapped ecc text messenger
 
-Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing)) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)? These routinely circumvent end-to-end encryption through keyloggers, screen capture and compromised keys. 
+Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing)) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)? These routinely bypass end-to-end encryption through keyloggers, screen capture and compromised keys. 
 
 We introduce a simple airgapped device to counter such threats. Plain text messages are ECC encrypted and displayed as QR codes. These QR codes can be photographed and shared using your smartphone. This method offers additional endpoint security.
 
@@ -10,13 +10,13 @@ This repository contains all hardware and software to create such a device, whic
 
 
 # How it works
-The device has cryptographic software, a keyboard, camera and screen. 
+The device has cryptographic software, a keyboard, camera, screen and is based on the RP2040 microcontroller.
 
-Each user has a qryptr device. Upon receiving it, the user can generate his/her ECC keypair. The user's ECC keypair uniquely identifies him/her, that is why it is referred to as the user ID.
+Each user has a device. Upon receiving it, the user can generate his/her ECC keypair. The user's ECC keypair uniquely identifies him/her, that is why it is referred to as the user ID.
 
-The public key of the user ID can be displayed onscreen as a QR code. Another user can add that user ID scanning it. This is preferably done in-person, not remotely, to prevent man-in-the-middle attacks. 
+The public key of the user ID can be displayed as a QR code. Another user can add that user ID scanning it. This is preferably done in-person, not remotely, to prevent man-in-the-middle attacks. 
 
-After two users have added each others' ID's, they can write text messages which are ECC encrypted, Base64 encoded and displayed as QR codes.
+After two users have added each others' ID's, they can write text messages which are ECC encrypted, base64 encoded and displayed as QR codes.
 
 Using their smartphones, users can photograph/share these QR-codes with their preferred messaging app, such as Signal, Whatsapp, Telegram, Viber, or even email or print the QR codes.
 
@@ -61,39 +61,45 @@ The recipient can scan the QR code with his/her qryptr device, which will read, 
 
 # Implementation
 ## hardware
+The device consists of 2 printed circuit boards (PCBs): a mainplate and frontplate with keys.
+
 We chose a microcontroller platform to minimize platform complexity and dependencies: the RP2040.
 
-QR codes are read using a hardware camera, the GM803, available on aliexpress. Get the GM803-S version with short focal range.
+QR codes are read using a hardware camera, the GM803, available on aliexpress. Get the GM803-S version with short focal range. This camera will read the QR code towards the serial interface of the RP2040.
 
-We are using the Sharp LS027B7DH01 display, available on aliexpress. Other u8g2 supported display could be used as well.
+We are using the Sharp LS027B7DH01 display, available on aliexpress. It is flat, requires few components, has a high resolution and low power requirements. Other u8g2 supported displays could be used as well wih some adjustments.
 
-Hardware designs are available in the /hardware folder. These can be used to improve the design or to order the hardware on jlcpcb.com directly.
+Hardware designs are available in the /hardware folder. With the Gerber, BOM and pick-and-place files, you can order directly from jlcpcb.com.
 
+Alternatively, you can view or clone these at the following urls to make adjustments.
 
-Alternatively, you can view or clone these at the following urls:
 
 https://oshwlab.com/thomas255/mainplate-public
+
 
 https://oshwlab.com/thomas255/frontplate-public
 
 
 Some parts needs to be ordered seperately from lscs.com
--LCSC#: C2911889 Clamshell 18P Bottom Contact Surface Mount FFC connector. We used one sided assembly at JLCPCB to save costs. This part can be soldered manually, or alternatively, two sided assembly can be used at JLCPCB, in which case this part does not need to be ordered seperately.
+-LCSC#: C2911889 Clamshell 18P Bottom Contact Surface Mount FFC connector.
+We used one sided assembly at JLCPCB to save costs. This part can be soldered manually, or alternatively, two sided assembly can be used at JLCPCB, in which case this part does not need to be ordered seperately.
+
 
 -LCSC#: C2857713 18P Opposite Side 5cm P=0.5mm flat flexible cable to connect the frontplate (keyboard) with the mainplate
 
+
 -LCSC#: C5151979 12P Opposite Side 5cm P=0.5mm flat flexible cable to connect the GM-803 camera to the mainplate
 
-You also need M2 nuts and M2 bolts of 3mm length to complete the assembly.
+-M2 nuts and M2 bolts of 3mm length to complete the assembly.
 
-A spacer.stl file is provided for 3d printing, this acts as a spacer for mechanical stability.
+A spacer.stl file is provided for 3d printing, this acts as a spacer for mechanical stability and assembly.
 
 We used a 302040 lipo battery: https://www.aliexpress.com/item/33009055815.html
 
 
 
 ## software
-We use the Arduino IDE to upload ./software/qryptr.ino
+We use the Arduino IDE.
 
 Go to the board manager and install Arduino mbed OS RP2040 Boards (3.5.4). This should set target_platform=mbed_rp2040 in preferences.txt for the arduino IDE.
 
@@ -103,9 +109,12 @@ Using the library manager in the Arduino IDE, install the following libraries:
 
 -QRCode by Richard Moore (https://github.com/ricmoo/qrcode/)
 
+
 -U8G2 by Oliver Kraus (https://github.com/olikraus/u8g2)
 
+
 -Crypto by Rhys Weatherley and Brandon Wiley (https://github.com/OperatorFoundation/Crypto)
+
 
 To upload the software, connect with PC through USB, turn on device, upload ./software/qryptr.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
 
@@ -122,7 +131,7 @@ To upload the software, connect with PC through USB, turn on device, upload ./so
 
 -Implement soft poweroff after timeout.
 
--Implement symmetric encryption on the long-term private key of the user. This will require a password prompt for decoding messages.
+-Implement symmetric encryption on the long-term private key of the user. This will require a password prompt for decrypting messages.
 
 -Enable multiple personal ID's (cryptographic keys)
 
