@@ -125,7 +125,7 @@ Using the library manager in the Arduino IDE, install the following libraries:
 
 To upload the software, connect with PC through USB, turn on device, upload ./software/qryptr.ino through the arduino IDE. If that does not work, there is a reset button. Turn off the device, hold the reset button, connect with PC, release the reset button. Then upload the arduino sketch through the arduino IDE.
 
-Once uploaded, navigate the menu with the arrow buttons (left, right, up, down). There is no enter key. To select an option, use the right arrow. You can always go back with left arrow or interrupt reading by pressing any key.
+Once uploaded, navigate the menu with the arrow buttons (left, right, up, down). There is no enter key. To select an option or continue, use the right arrow. You can always go back with left arrow or interrupt reading by pressing any key.
 
 
 # Todos
