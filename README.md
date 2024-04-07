@@ -6,7 +6,7 @@ We introduce a simple offline, airgapped device to counter such threats. Plain t
 
 This repository contains all hardware and software to create such a device, which allows text messages of up to 299 characters.
 
-<img src="./images/basic11.png" width="30%" height="30%">
+<img src="./images/basic111.png" width="30%" height="30%">
 
 
 # How it works
