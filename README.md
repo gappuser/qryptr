@@ -20,7 +20,7 @@ After two users have added each others' ID's, they can write text messages which
 
 Using their smartphones, users can photograph/share these QR-codes with their preferred messaging app, such as Signal, Whatsapp, Telegram, Viber, or even email or print the QR codes.
 
-The recipient can scan the QR code with his/her qryptr device, which will read, decode, decrypt and display the text message. The recommended read distance is 10 cm between smartphone screen and camera. The letter "Z" is marked on the frontpanel to help a user center the qr code in front of the camera.
+The recipient can scan the QR code with his/her device, which will read, decode, decrypt and display the text message. The recommended read distance is 10 cm between smartphone screen and camera. The letter "Z" is marked on the frontpanel to help a user center the qr code in front of the camera.
 
 
 ### Share and add IDs
