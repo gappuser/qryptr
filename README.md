@@ -2,7 +2,7 @@
 
 Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing)) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)? These routinely bypass end-to-end encryption through keyloggers, screen capture and compromised keys. 
 
-We introduce a simple airgapped device to counter such threats. Plain text messages are ECC encrypted and displayed as QR codes. These QR codes can be photographed and shared using your smartphone. This method offers additional endpoint security.
+We introduce a simple offline, airgapped device to counter such threats. Plain text messages are ECC encrypted and displayed as QR codes. These QR codes can be photographed and shared using your smartphone. This method offers additional endpoint security.
 
 This repository contains all hardware and software to create such a device, which allows text messages of up to 299 characters.
 
