@@ -2,7 +2,7 @@
 
 Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing)) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)? These routinely bypass end-to-end encryption through keyloggers, screen capture and compromised keys. 
 
-We introduce a simple offline, airgapped device to counter such threats. Plain text messages are ECC encrypted and displayed as QR codes. These QR codes can be photographed and shared using your smartphone. This method offers additional endpoint security.
+We introduce a simple, offline, airgapped device to counter such threats. Plain text messages are ECC encrypted and displayed as QR codes. These QR codes can be photographed and shared using your smartphone. This method offers additional endpoint security as plaintext and cryptographic keys are physically seperated from your smartphone.
 
 This repository contains all hardware and software to create such a device, which allows text messages of up to 299 characters.
 
@@ -49,13 +49,13 @@ The recipient can scan the QR code with his/her device, which will read, decode,
 
 
 # Use cases
+-Sharing sensitive information between journalists, lawyers, political actors or civil servants.
+
 -Sharing passwords between system administrators.
 
 -Sharing passwords for crypto wallets.
 
 -Sharing key material or passwords for HSM procedures.
-
--Sharing sensitive information.
 
 -Thwart spyware or advanced threats.
 
@@ -67,7 +67,7 @@ We chose a microcontroller platform to minimize platform complexity and dependen
 
 QR codes are read using a hardware camera, the GM803, available on aliexpress. Get the GM803-S version with short focal range. This camera will read the QR code towards the serial interface of the RP2040.
 
-We are using the Sharp LS027B7DH01 display, available on aliexpress. It is flat, requires few components, has a high resolution and low power requirements. Other u8g2 supported displays could be used as well wih some adjustments.
+We are using the Sharp LS027B7DH01 display, available on aliexpress. It is flat, requires few components, has a high resolution and low power requirements. Other u8g2 supported displays could be used as well with some adjustments.
 
 Hardware designs are available in the /hardware folder. With the Gerber, BOM and pick-and-place files, you can order directly from jlcpcb.com.
 
