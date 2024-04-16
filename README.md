@@ -6,6 +6,8 @@ These routinely bypass end-to-end encryption through keyloggers, screen capture 
 
 Smartphones are part of complex ecosystems with dozens of hardware and software components and remain vulnerable despite vendor and political efforts.
 
+<br />
+
 We introduce a simple, offline, airgapped device to counter such threats. 
 
 Plain text messages are ECC encrypted and displayed as QR codes. These QR codes can be photographed and shared using your smartphone. 
