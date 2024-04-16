@@ -1,10 +1,6 @@
 # qryptr - airgapped ecc text messenger
 
-Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing)), [zero-days](https://en.wikipedia.org/wiki/Zero-day_vulnerability) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)? 
-
-These routinely bypass end-to-end encryption through keyloggers, screen capture and compromised keys. 
-
-Smartphones are part of complex ecosystems with dozens of hardware and software components and remain vulnerable despite vendor and political efforts.
+Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing)), [zero-days](https://en.wikipedia.org/wiki/Zero-day_vulnerability) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)? These routinely bypass end-to-end encryption through keyloggers, screen capture and compromised keys. Smartphones are part of complex ecosystems with dozens of hardware and software components and remain vulnerable despite vendor and political efforts.
 
 <br />
 
