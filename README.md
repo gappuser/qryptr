@@ -1,6 +1,6 @@
 # qryptr - airgapped ecc text messenger
 
-Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing)) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)? These routinely bypass end-to-end encryption through keyloggers, screen capture and compromised keys. 
+Are you a smartphone user worried about [spyware](https://en.wikipedia.org/wiki/Spyware), [advanced actors](https://en.wikipedia.org/wiki/Advanced_persistent_threat), [backdoors](https://en.wikipedia.org/wiki/Backdoor_(computing)), [zero-days](https://en.wikipedia.org/wiki/Zero-day_vulnerability) or [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack)? These routinely bypass end-to-end encryption through keyloggers, screen capture and compromised keys. Smartphones are part of complex ecosystems with dozens of hardware and software components and remain vulnerable despite vendor and political efforts.
 
 We introduce a simple, offline, airgapped device to counter such threats. Plain text messages are ECC encrypted and displayed as QR codes. These QR codes can be photographed and shared using your smartphone. This method offers additional endpoint security as plaintext and cryptographic keys are physically seperated from your smartphone.
 
@@ -204,6 +204,17 @@ Use the m2 3mm bolts to screw the frontplate down.
 
 <img src="./images/construction66.png" width="30%" height="30%">
 
+## Setup GM803 camera
+
+After charging, turn on the device (PWR top right button). You have to enable serial output of the GM803 camera. To do so, scan the following QR codes.
+
+### Reset (GM803 factory default)
+<img src="./images/reset.png" width="50%" height="50%">
+
+
+### Enable serial output
+
+<img src="./images/serialoutput.png" width="50%" height="50%">
 
 
 
