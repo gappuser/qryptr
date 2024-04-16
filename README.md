@@ -208,14 +208,13 @@ Use the m2 3mm bolts to screw the frontplate down.
 
 ## Setup GM803 camera
 
-After charging, turn on the device (PWR top right button). You have to enable serial output of the GM803 camera. To do so, scan the following QR codes.
+After charging, a green led will light up. Turn on the device (PWR top right push button). You have to enable serial output of the GM803 camera. To do so, scan the following QR codes.
 
 ### Reset (GM803 factory default)
 <img src="./images/reset.png" width="15%" height="15%">
 
 
 ### Enable serial output
-
 <img src="./images/serialoutput.png" width="15%" height="15%">
 
 
