@@ -162,11 +162,11 @@ A: The Sharp LS027B7DH01 display requires 5V according to the specifications, al
 
 Q: Could we create a single PCB instead of a backplate and frontplate?
 
-A: Yes, it could be done, although a singular PCB would need double-sided PCB assembly, which is more expensive for small quantities @ JLCPCB. Also, a seperate backplate would need to be introduced.
+A: Yes, it could be done, although a singular PCB would need double-sided PCB assembly which is more expensive for small quantities @ JLCPCB. It likely would require a 4 layer PCB instead of 2 layer PCBs. Also, a seperate backplate would need to be introduced.
 
 Q: How about using an epaper display instead of the Sharp display?
 
-A: It has been considered, but the Sharp display has a higher refresh rate and more pixels, since we need quite large QR codes to get to 299 character messages. The Sharp display still has low energy consumption. It is also very flat and easy to integrate with just a couple of capacitors. The Sharp display is easy to use with the U8G2 library.
+A: It has been considered, but the Sharp display has a higher refresh rate and is very flat and easy to integrate with just a couple of capacitors. The Sharp display is easy to use with the U8G2 library. There are other advantages to using epaper displays such as low glare which would make it easier to photograph the screen, so this could still be a good option.
 
 ## software
 Q: How is encryption done?
