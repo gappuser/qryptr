@@ -82,7 +82,7 @@ https://oshwlab.com/thomas255/mainplate-public (click "clone")  <img align="righ
 https://oshwlab.com/thomas255/frontplate-public (click "clone")
 
 
-Some parts needs to be ordered seperately from lscs.com:
+Some parts needs to be ordered seperately from [lscs.com](https://www.lcsc.com/):
 
 
 -LCSC#: C2911889 Clamshell 18P Bottom Contact Surface Mount FFC connector.
