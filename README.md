@@ -63,45 +63,37 @@ The recipient can scan the QR code with his/her device, which will read, decode,
 
 # Implementation
 ## hardware
-The device consists of 2 printed circuit boards (PCBs): a mainplate and frontplate with keys.
-
-We chose a microcontroller platform to minimize platform complexity and dependencies: the RP2040.
-
-QR codes are read using a hardware camera, the GM803, available on aliexpress. Get the GM803-S version with short focal range. This camera will read the QR code towards the serial interface of the RP2040.
-
-We are using the Sharp LS027B7DH01 display, available on aliexpress. It is flat, requires few components, has a high resolution and low power requirements. Other u8g2 supported displays could be used as well with some adjustments.
-
-Hardware designs are available in the /hardware folder. With the Gerber, BOM and pick-and-place files, you can order directly from jlcpcb.com.
+### Printed Circuit Boards (PCBs)
+The device consists of 2 printed circuit boards (PCBs): a mainplate and frontplate with keys. We chose a microcontroller platform to minimize platform complexity and dependencies: the RP2040. Design files are available in the /hardware folder. With the Gerber, BOM and pick-and-place files, you can order directly from jlcpcb.com or other PCB manufacturers. 
 
 Alternatively, you can view or clone these at the following urls to make adjustments.
 
-
 https://oshwlab.com/thomas255/mainplate-public (click "clone")  <img align="right" src="./images/clone2.png" width="20%" height="20%">
-
 
 https://oshwlab.com/thomas255/frontplate-public (click "clone")
 
 
+### Camera
+
+QR codes are read using a hardware camera, the GM803, available on aliexpress. Get the GM803-S version with short focal range. This camera will read the QR code towards the serial interface of the RP2040.
+
+### Display
+
+We are using the Sharp LS027B7DH01 display, available on aliexpress. It is flat, requires few components, has a high resolution and low power requirements. Other u8g2 supported displays could be used as well with some adjustments.
+
+### Other parts
+
 Some parts needs to be ordered seperately from [lscs.com](https://www.lcsc.com/):
 
-
--LCSC#: C2911889 Clamshell 18P Bottom Contact Surface Mount FFC connector.
-
-We used one sided assembly at JLCPCB to save costs. 
-This part can be soldered manually, or alternatively, two sided assembly can be used at JLCPCB, in which case this part does not need to be ordered seperately.
-
+-LCSC#: C2911889 Clamshell 18P Bottom Contact Surface Mount FFC connector. We order this part seperately to solder it manually so that we can use one sided PCB assembly at JLCPCB to save costs. Alternatively, two sided assembly for the frontplate can be used at JLCPCB, in which case this part does not need to be ordered seperately.
 
 -LCSC#: C2857713 18P Opposite Side 5cm P=0.5mm flat flexible cable to connect the frontplate (keyboard) with the mainplate
 
-
 -LCSC#: C5151979 12P Opposite Side 5cm P=0.5mm flat flexible cable to connect the GM-803 camera to the mainplate
-
 
 -M2 nuts and M2 bolts of 3mm length.
 
-
--A plastic spacer between the mainplate and frontplate, for mechanical stability and assembly, which can be 3d printed with the provided spacer.stl file.
-
+-A plastic spacer between the mainplate and frontplate, for mechanical stability and assembly, which can be 3d printed with the provided ./hardware/spacer.stl file.
 
 -A 302040 lipo battery: https://www.aliexpress.com/item/33009055815.html
 
