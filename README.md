@@ -138,6 +138,8 @@ Once uploaded, navigate the menu with the arrow buttons (left, right, up, down).
 
 
 ## software
+-Replace Arduino Crypto library with Monocypher (https://github.com/LoupVaillant/Monocypher). Monocypher is more widely used and more regularly updated.
+
 -Create a software procedure to turn the camera on/off to save power.
 
 -Implement soft poweroff after timeout.
