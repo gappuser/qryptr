@@ -161,6 +161,12 @@ Once uploaded, navigate the menu with the arrow buttons (left, right, up, down).
 
 -Support deadman's switch, that is, reset the device upon startup if a wrong or particular password is used, or after a particular time period (though this is hard without a real time clock).
 
+-Research backup-to-screen, that is, backup some contacts by displaying them on the screen and letting users decide how to back them up (writing them down or making a photo).
+
+-Reshare keys to trusted contacts, possibly by signing them as well.
+
+-Possible enable local, offline password manager.
+
 # FAQ
 ## hardware
 Q: Could we run the whole device on 3.3V? 
