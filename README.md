@@ -128,6 +128,13 @@ Once uploaded, navigate the menu with the arrow buttons (left, right, up, down).
 
 -Expose SWD pins on PCB to enable loading the software through SWD pins. This will allow us to disconnect the datalines from the USB port and prevent an attack vector.
 
+-Improve keyboard
+
+-Use rp2350 TRNG and possibly secure boot.
+
+-RF and audio shielding to prevent side channel attacks.
+
+-Use the HM01B0 camera instead.
 
 ## software
 -Replace Arduino Crypto library with Monocypher (https://github.com/LoupVaillant/Monocypher). Monocypher is more widely used and more regularly updated.
@@ -136,7 +143,7 @@ Once uploaded, navigate the menu with the arrow buttons (left, right, up, down).
 
 -Implement soft poweroff after timeout.
 
--Implement symmetric encryption on the long-term private key of the user. This will require a password prompt for decrypting messages.
+-Implement symmetric encryption on the long-term private key of the user. This will require a password prompt for decrypting messages. Possibly use 2 passwords, a long one for starting up, and a shorter one for decrypting/encrypting.
 
 -Enable multiple personal ID's (cryptographic keys)
 
@@ -147,6 +154,12 @@ Once uploaded, navigate the menu with the arrow buttons (left, right, up, down).
 -Write special characters (diacritics) with ctrl button.
 
 -On screen arrows to make navigation more intuitive.
+
+-Support reset-after-x-messages, to reset the device after decrypting or encrypting a certain amount of messages.
+
+-Support multiple languages.
+
+-Support deadman's switch, that is, reset the device upon startup if a wrong or particular password is used, or after a particular time period (though this is hard without a real time clock).
 
 # FAQ
 ## hardware
